@@ -137,3 +137,79 @@ main{
     font-size: 25px;
 }
 
+
+/* Media Queries pour écrans de moins de 768px */
+@media (max-width: 768px) {
+    .identity img {
+        width: 150px; /* Réduction de la taille de l'image */
+    }
+
+    .identity h1 {
+        font-size: 50px; /* Réduction de la taille de la police */
+    }
+
+    .headerMenu {
+        padding-top: 20px;
+        flex-direction: column; /* Empile les éléments du menu */
+    }
+
+    .headerMenu a {
+        font-size: 20px; /* Réduction de la taille du texte */
+        padding: 10px;
+    }
+
+    .filters p {
+        font-size: 20px; /* Réduction de la taille des filtres */
+        padding-left: 15px;
+    }
+
+    .filterTitle {
+        font-size: 40px;
+    }
+
+    .articles {
+        flex-direction: column; /* Les articles sont empilés verticalement */
+    }
+
+    .article {
+        width: 90%; /* Prend presque toute la largeur de l'écran */
+        margin: 10px auto; /* Centrage et marge réduite */
+    }
+
+    .article p {
+        font-size: 20px; /* Réduction de la taille du texte */
+    }
+
+    .article button {
+        font-size: 20px; /* Réduction de la taille du bouton */
+        width: 80%; /* Bouton plus grand sur mobile */
+    }
+}
+
+/* Media Queries pour écrans de moins de 480px (très petits écrans) */
+@media (max-width: 480px) {
+    .identity img {
+        width: 100px; /* Encore plus petite taille pour l'image */
+    }
+
+    .identity h1 {
+        font-size: 40px; /* Plus petite taille de police */
+    }
+
+    .headerMenu a {
+        font-size: 18px; /* Réduction supplémentaire de la taille du texte */
+    }
+
+    .article img {
+        width: 100%; /* L'image prend toute la largeur disponible */
+        height: auto;
+    }
+
+    .article p {
+        font-size: 18px; /* Réduction de la taille du texte */
+    }
+
+    .article button {
+        font-size: 18px; /* Bouton plus petit */
+    }
+}
