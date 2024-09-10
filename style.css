@@ -152,19 +152,161 @@ main{
 
 
 
-footer{
+footer {
     background-color: #942828;
     color: white;
     text-align: center;
     padding: 20px;
     width: 100%;
-    position: relative;
-    bottom: 0;
+    position: fixed; /* Fixe le footer au bas de la fenêtre */
+    bottom: 0; /* Aligne le footer au bas de la fenêtre */
 }
 
 footer p{
     font-family: "OldLondon";
 }
+
+
+
+/* Conteneur principal du panier et de la section de paiement */
+.cartPageMain {
+    display: flex;
+    justify-content: space-between; /* Espacement entre le panier et la section de paiement */
+    align-items: flex-start; /* Aligner les éléments en haut */
+    max-width: 1200px; /* Largeur maximale pour éviter que le contenu s'étire trop */
+    margin: 20px auto; /* Centrer le conteneur */
+}
+
+/* Section du panier */
+.cart {
+    flex: 2; /* Prendre plus d'espace que la section de paiement */
+    max-width: 700px; /* Largeur maximale pour le panier */
+    padding: 20px;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+}
+
+/* Section de paiement */
+.checkout {
+    flex: 1; /* Prendre moins d'espace que la section du panier */
+    max-width: 400px; /* Largeur maximale pour la section de paiement */
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style pour le champ de code promo */
+#promoCode {
+    width: calc(100% - 20px); /* Utiliser toute la largeur disponible en laissant un peu de marge */
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 10px; /* Ajouter de l'espace entre le champ et le bouton */
+}
+
+/* Style pour le bouton de paiement */
+.checkout button {
+    width: 100%; /* Le bouton prend toute la largeur disponible */
+    padding: 12px 0;
+    font-size: 18px;
+    background-color: #942828;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Coolvetica';
+    transition: background-color 0.3s ease;
+}
+
+.checkout button:hover {
+    background-color: #721f1f;
+}
+
+.checkout input{
+    display: flex;
+    flex-direction: column;
+    font-family: "Coolvetica";
+    width: 50px;
+}
+
+.checkout p
+{
+    display: flex;
+    font-family: "Coolvetica";
+}
+
+/* Style pour les articles dans le panier */
+.articlesInCart {
+    font-family: "Coolvetica";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.articlesInCart img {
+    width: 15%; /* Taille raisonnable pour l'image */
+    height: auto;
+}
+
+.articlesInCart p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.articlesInCart p:first-of-type {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.articlesInCart p:last-of-type {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 600px) {
+    .cart {
+        width: 100%; /* Utiliser tout l'espace disponible sur mobile */
+        padding: 10px; /* Réduire légèrement le padding pour éviter le débordement */
+    }
+
+    .articlesInCart {
+        flex-direction: column; /* Empiler les articles verticalement */
+        text-align: center; /* Centrer le texte */
+    }
+
+    .articlesInCart img {
+        margin-bottom: 10px; /* Ajouter de l'espace en bas de l'image */
+        width: 60px; /* Réduire encore la taille de l'image pour les petits écrans */
+    }
+
+    .articlesInCart p {
+        font-size: 18px; /* Réduire légèrement la taille des polices */
+    }
+
+    .checkout {
+        flex-direction: column; /* Empiler le champ de code promo et le bouton verticalement */
+        align-items: stretch; /* Étendre les éléments pour utiliser la largeur complète */
+    }
+
+    #promoCode {
+        width: 100%; /* Utiliser toute la largeur disponible */
+        margin-bottom: 10px; /* Ajouter un espace entre le champ et le bouton */
+    }
+
+    .checkout button {
+        width: 100%; /* Le bouton prend toute la largeur */
+    }
+}
+
+
 
 /* Media Queries pour écrans de moins de 768px */
 @media (max-width: 768px) {

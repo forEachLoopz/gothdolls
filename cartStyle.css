@@ -1,0 +1,78 @@
+
+
+
+/* Cart Section */
+.cart {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d6d6d6;
+    border: none;
+    border-radius: 25px;
+}
+
+.articlesInCart {
+    font-family: "Coolvetica";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.articlesInCart img {
+    width: 15%; /* Taille raisonnable pour l'image */
+    height: auto;
+}
+
+
+.articlesInCart p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.articlesInCart p:first-of-type {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.articlesInCart p:last-of-type {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Checkout Section */
+.checkout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#promoCode {
+    width: 60%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+}
+
+.checkout button {
+    width: 35%;
+    padding: 12px 0;
+    font-size: 18px;
+    background-color: #942828;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Coolvetica';
+}
+
+.checkout button:hover {
+    background-color: #721f1f;
+}
